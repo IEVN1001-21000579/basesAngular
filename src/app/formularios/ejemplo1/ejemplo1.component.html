@@ -1,0 +1,33 @@
+<div>
+    <h1>Sumar dos números</h1>
+    <form [formGroup]="formulario">
+        <div>
+            <label>Numero1:</label>
+            <input formControlName="numero1" type="number">
+        </div>
+        <div>
+            <label>Numero2:</label>
+            <input formControlName="numero2" type="number">
+        </div>
+
+        <button (click)="sumarNumeros()">Sumar</button>
+        <h3>La suma es: {{resultado}}</h3>
+    </form>
+
+    <h1>Encontrar la distancia entre dos puntos</h1>
+    <form [formGroup]="formulario">
+        <div>
+            <label>Escribe las coordenadas de a en "x" y "y":</label>
+            <input formControlName="puntoACordenadaX" type="number">
+            <input formControlName="puntoACordenadaY" type="number">
+        </div>
+        <div>
+            <label>Escribe las coordenadas de b en "x" y "y":</label>
+            <input formControlName="puntoBCordenadaX" type="number">
+            <input formControlName="puntoBCordenadaY" type="number">
+        </div>
+
+        <button (click)="calcularDistancia()">Calcular</button>
+        <h3>La distancia es: {{resultadoDistancia}}</h3>
+    </form>
+</div>
