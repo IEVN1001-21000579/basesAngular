@@ -1,0 +1,33 @@
+<div class="row">
+    
+    <form [formGroup]="formulario">
+        <div class="col-md-6">
+            <h3>Datos personales</h3>
+            <label>Nombre:</label>
+            <input formControlName="name" type="string">
+            <label>Apellido Paterno:</label>
+            <input formControlName="Apaterno" type="string">
+            <label>Apellido Materno:</label>
+            <input formControlName="Amaterno" type="string">
+        
+            <h3>Fecha de nacimiento</h3>
+            <label>Día:</label>
+            <input formControlName="dia" type="number">
+            <label>Mes:</label>
+            <input formControlName="mes" type="mes">
+            <label>Año:</label>
+            <input formControlName="ano" type="ano">
+            <label>Sexo:</label>
+            <ul>
+            <li><input type="radio" name="masculino" value="masculino">Masculino</li>
+            <li><input type="radio" name="femenino" value="femenino">Femenino</li>
+            </ul>
+            <button (click)="imprimir()">Imprimir</button>
+        </div>
+    </form>
+
+    <div class="col-md-6">
+        <h3>Hola {{nombre}}, tienes {{edad}} años, tu signo zodiacal chino es {{signo}}</h3>
+        <img  alt="Signo" [src]="imgSigno">
+    </div>
+</div>
